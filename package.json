@@ -1,0 +1,15 @@
+{
+  "name": "fridge-controller",
+  "version": "0.0.0",
+  "description": "application that controls the temperature in my fridge for beer fermentation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.10.0"
+  }
+}
