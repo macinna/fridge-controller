@@ -152,10 +152,17 @@ PIDController.prototype.calculate = function (actualTemperature) {
     if (this._U > this._MaxU) {
         this._U = this._MaxU;
     }
+
+    if (this._U < -(this._MaxU)) {
+        this._U = -(this._MaxU);
+    }
+
+/*
     else if (this._U < 0) {                                    // Power cannot be a negative number
         this._U = 0;                                             // this means that the system can only heating
     }
 
+*/
     // Calculate the output
     // and transform U to the [0..1] interval
     return (this._U / 1000) * this._Pmax;
